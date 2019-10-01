@@ -10,12 +10,27 @@ public class ArrayRunner
         Student studentB = new Student("Lydia","October","purple");
         myClass[0] = studentB;
 
-        /*System.out.println(myClass[2]);
-        System.out.println(myClass[0]);*/
+        String[] names = {"Michael","Brian","Duncan","Bennett","Martin",
+                          "Jessica","Lexy","Zoe","Jimmy","Sanjit","Andrew","Will"};
+        String[] months = {"February","October","March","September","July",
+                            "February","November","December","August","May",
+                            "September","December"};
+        String[] colors = {"Green","Fuchsia","Purple","Turquoise","Cyan",
+                            "Purple","Pink","Indigo","Green","Blue","Green","SpaceBlack"};
 
-        for (int i=0; i<4; i++)
+        for (int i=0; i<12; i++)
         {
-            System.out.println(myClass[i]);
+            myClass[i] = new Student(names[i],months[i],colors[i]);
+        }
+        System.out.println("Print out the students!");
+
+        for (Student s: myClass)
+        {
+            if (s.getName().equals("Martin"))
+            {
+                System.out.print("*****");
+            }
+            System.out.println(s);
         }
 
     }
